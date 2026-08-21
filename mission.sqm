@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={257.94861,58.749744,181.8367};
-		dir[]={-0.92044407,-0.28996006,0.2621645};
-		up[]={-0.27887672,0.9570353,0.079430886};
-		aside[]={0.27393103,1.1222437e-07,0.96176344};
+		pos[]={227.86299,53.381161,226.98898};
+		dir[]={-0.53778011,-0.58560324,0.60659564};
+		up[]={-0.38849738,0.81057578,0.43821126};
+		aside[]={0.74831378,-9.6671283e-07,0.66342515};
 	};
 };
 binarizationWanted=0;
@@ -638,7 +638,20 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=3;
+		class Attribute3
+		{
+			property="Init";
+			expression="if !(is3DEN) then {[] call compile _value;};";
+			class Value
+			{
+				class data
+				{
+					singleType="STRING";
+					value="if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};";
+				};
+			};
+		};
+		nAttributes=4;
 	};
 };
 class Mission
@@ -2337,7 +2350,8 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						name="PL_4";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						name="JTAC";
 						description="JTAC";
 						isPlayable=1;
 						class Inventory
@@ -10524,7 +10538,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={153.91837,5.0014391,240.37386};
+						position[]={153.918,5.0014391,240.37401};
 						angles[]={0,1.5967145,0};
 					};
 					side="West";
@@ -10532,7 +10546,8 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						name="PL_9";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						name="JTAC2";
 						description="JTAC";
 						isPlayable=1;
 						class Inventory
@@ -23143,7 +23158,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={133.3269,5.0014391,223.05196};
+						position[]={133.327,5.0014391,223.052};
 						angles[]={0,1.5633438,0};
 					};
 					side="West";
@@ -23151,6 +23166,8 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						name="JTACSF";
 						description="JTAC";
 						isPlayable=1;
 						class Inventory
@@ -23215,6 +23232,19 @@ class Mission
 						};
 						class Attribute4
 						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute5
+						{
 							property="TMF_Channellist";
 							expression="_this setVariable ['TMF_Channellist',_value,true];";
 							class Value
@@ -23226,7 +23256,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
+						class Attribute6
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -23239,7 +23269,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute6
+						class Attribute7
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -23252,7 +23282,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute7
+						class Attribute8
 						{
 							property="TMF_assignGear_full";
 							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
@@ -23265,7 +23295,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute8
+						class Attribute9
 						{
 							property="TMF_assignGear_role";
 							expression="false";
@@ -23278,7 +23308,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=9;
+						nAttributes=10;
 					};
 				};
 			};
@@ -41379,7 +41409,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="rats";
+									value="player_loadout";
 								};
 							};
 						};
@@ -41483,7 +41513,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="[""isr"",""rats"",false]";
+									value="[""isr"",""player_loadout"",false]";
 								};
 							};
 						};
@@ -45379,7 +45409,8 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						name="PL_5";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						name="JTAC_2";
 						description="JTAC";
 						isPlayable=1;
 						class Inventory
@@ -53606,7 +53637,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={165.56737,5.0014391,393.02646};
+						position[]={165.567,5.0014391,393.026};
 						angles[]={0,1.575212,0};
 					};
 					side="East";
@@ -53614,7 +53645,8 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						name="PL_11";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						name="JTAC2_2";
 						description="JTAC";
 						isPlayable=1;
 						class Inventory
@@ -66413,14 +66445,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={144.78223,5.0014391,376.69354};
-						angles[]={0,1.541871,0};
+						position[]={144.782,5.0014391,376.694};
+						angles[]={0,1.5418762,0};
 					};
 					side="East";
 					flags=5;
 					class Attributes
 					{
 						rank="CAPTAIN";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						name="JTACSF_2";
 						description="JTAC";
 						isPlayable=1;
 						class Inventory
@@ -66485,6 +66519,19 @@ class Mission
 						};
 						class Attribute4
 						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute5
+						{
 							property="TMF_Channellist";
 							expression="_this setVariable ['TMF_Channellist',_value,true];";
 							class Value
@@ -66496,7 +66543,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
+						class Attribute6
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -66509,7 +66556,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute6
+						class Attribute7
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -66522,7 +66569,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute7
+						class Attribute8
 						{
 							property="TMF_assignGear_full";
 							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
@@ -66535,7 +66582,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute8
+						class Attribute9
 						{
 							property="TMF_assignGear_role";
 							expression="false";
@@ -66548,7 +66595,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=9;
+						nAttributes=10;
 					};
 				};
 			};
@@ -84927,7 +84974,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="rats";
+									value="player_loadout";
 								};
 							};
 						};
@@ -85031,7 +85078,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="[""isr"",""rats"",false]";
+									value="[""isr"",""player_loadout"",false]";
 								};
 							};
 						};
@@ -88893,7 +88940,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={207.25,5.0014391,77.925011};
+						position[]={207.25,5.0014391,77.925003};
 						angles[]={0,1.5667471,0};
 					};
 					side="Independent";
@@ -88901,7 +88948,8 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						name="PL_3";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						name="JTAC_1";
 						description="JTAC";
 						isPlayable=1;
 						class Inventory
@@ -97115,7 +97163,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={169.77242,5.0014391,79.258568};
+						position[]={169.772,5.0014391,79.259003};
 						angles[]={0,1.5667471,0};
 					};
 					side="Independent";
@@ -97123,7 +97171,8 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						name="PL_7";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						name="JTAC2_1";
 						description="JTAC";
 						isPlayable=1;
 						class Inventory
@@ -109791,7 +109840,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={143.40112,5.0014391,61.265827};
+						position[]={143.401,5.0014391,61.265999};
 						angles[]={0,1.5667471,0};
 					};
 					side="Independent";
@@ -109799,6 +109848,8 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						name="JTACSF_1";
 						description="JTAC";
 						isPlayable=1;
 						class Inventory
@@ -109863,6 +109914,19 @@ class Mission
 						};
 						class Attribute4
 						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute5
+						{
 							property="TMF_Channellist";
 							expression="_this setVariable ['TMF_Channellist',_value,true];";
 							class Value
@@ -109874,7 +109938,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
+						class Attribute6
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -109887,7 +109951,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute6
+						class Attribute7
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -109900,7 +109964,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute7
+						class Attribute8
 						{
 							property="TMF_assignGear_full";
 							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
@@ -109913,7 +109977,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute8
+						class Attribute9
 						{
 							property="TMF_assignGear_role";
 							expression="false";
@@ -109926,7 +109990,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=9;
+						nAttributes=10;
 					};
 				};
 			};
@@ -128079,7 +128143,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="rats";
+									value="player_loadout";
 								};
 							};
 						};
@@ -128183,7 +128247,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="[""isr"",""rats"",false]";
+									value="[""isr"",""player_loadout"",false]";
 								};
 							};
 						};
