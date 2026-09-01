@@ -316,6 +316,80 @@ class sfrespawn : r {
 	};
 };
 
+// RATS Breacher
+class breacher : r
+{
+	displayName = "Breacher";
+	primaryWeapon[] = {
+		"CUP_arifle_HK416_Black"
+	};
+	scope[] = {
+		"optic_hamr"
+	};
+	attachment[] = {
+		"CUP_acc_ANPEQ_15_Flashlight_Black_L"
+	};
+	magazines[] += {
+		LIST_2("tsp_flashbang_m84"),
+		"mjb_SmokeShellLightBlue",
+		"CUP_15Rnd_9x19_M9",
+		LIST_7("CUP_30Rnd_556x45_PMAG_BLACK_PULL")
+	};
+	backpack[] = {
+		"B_Kitbag_rgr"
+	};
+	backpackItems[] = {
+		LIST_6("CUP_30Rnd_556x45_PMAG_BLACK_PULL"),
+		LIST_3("greenmag_ammo_556x45_basic_60Rnd"),
+		"ACE_Clacker",
+		"ACE_wirecutter",
+		LIST_2("DemoCharge_Remote_Mag"),
+		LIST_2("tsp_breach_package_mag"),
+		LIST_2("HandGrenade"),
+		LIST_2("SmokeShell")
+	};
+};
+
+// RATS SF Breacher
+class sfbreacher : breacher {
+	displayName = "SF Breacher";
+	silencer[] = {
+		"CUP_muzzle_snds_SCAR_L"
+	};
+	headgear[] = {
+		"H_HelmetB_camo"
+	};
+	goggles[] =	{
+		"CUP_G_ESS_BLK_Facewrap_Black"
+	};
+	magazines[] = {
+		LIST_12("CUP_30Rnd_556x45_Emag"),
+		LIST_2("tsp_flashbang_cts"),
+		LIST_2("SmokeShellBlue"),
+		LIST_3("greenmag_ammo_556x45_basic_60Rnd"),
+		"HandGrenade",
+		"CUP_12Rnd_45ACP_mk23"
+	};
+	vest[] = {
+		//"rhsusf_plateframe_rifleman"
+		"CUP_V_B_Ciras_Khaki3"
+	};
+	backpack[] = {
+		"G2_Gunslinger"
+	};
+	sidearmWeapon[] = {
+		"CUP_hgun_Mk23"
+	};
+	sidearmAttachments[] = {
+		"cup_acc_mk23_lam_f",
+		"cup_muzzle_snds_mk23",
+	};
+	items[] += {
+		"ACE_CableTie",
+		"ACE_IR_Strobe_Item"
+	};
+};
+
 // RATS Automatic Rifle Slot
 class ar : basetrooper
 {
@@ -658,7 +732,10 @@ class mat : r
 		#endif
 	};
 	secondaryWeapon[] = {
-		"launch_MRAWS_green_rail_F"
+		"CUP_launch_Mk153Mod0_blk"
+	};
+	secondaryAttachments[] = {
+		"CUP_optic_SMAW_Scope"
 	};
 	backpack[] = {
 		"B_Carryall_cbr"
@@ -673,7 +750,16 @@ class mat : r
 		#else
 			LIST_3("FirstAidKit"),
 		#endif
-		LIST_4("MRAWS_HEAT_F")
+		LIST_4("CUP_SMAW_HEAA_M")
+	};
+	magazines[] = {
+		LIST_2("HandGrenade"),
+		LIST_2("SmokeShell"),
+		LIST_2("tsp_flashbang_m84"),
+		"mjb_SmokeShellLightBlue",
+		"CUP_15Rnd_9x19_M9",
+		LIST_8("CUP_30Rnd_556x45_PMAG_BLACK_PULL"),
+		LIST_3("CUP_SMAW_Spotting")
 	};
 };
 
@@ -698,7 +784,7 @@ class amat : r
 			LIST_3("FirstAidKit"),
 		#endif
 		LIST_3("greenmag_ammo_556x45_basic_60Rnd"),
-		LIST_4("MRAWS_HEAT_F")
+		LIST_4("CUP_SMAW_HEAA_M")
 	};
 };
 
@@ -733,6 +819,14 @@ class hat : mat
 	};
 	backpack[] = {
 		"B_Bergen_mcamo_F"
+	};
+	magazines[]  = {
+		LIST_2("HandGrenade"),
+		LIST_2("SmokeShell"),
+		LIST_2("tsp_flashbang_m84"),
+		"mjb_SmokeShellLightBlue",
+		"CUP_15Rnd_9x19_M9",
+		LIST_7("CUP_30Rnd_556x45_PMAG_BLACK_PULL")
 	};
 	backpackItems[] =
 	{
