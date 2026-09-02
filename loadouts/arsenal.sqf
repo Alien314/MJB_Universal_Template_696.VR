@@ -2701,7 +2701,7 @@ private _itemWeaponAmmo =
 	"ACE_Chemlight_IR"
 ];
 
-private ['_itemWeaponTracerAmmo','_itemWeaponHighCapAmmo','_itemWeaponARAmmo','_itemWeaponSFSharpshooterAmmo'];
+private ['_itemWeaponTracerAmmo','_itemWeaponHighCapAmmo','_itemWeaponARAmmo','_itemWeaponSFSharpshooterAmmo','_itemWeaponSFMGAmmo','_itemWeaponSFRifleAmmo'];
 //Red Tracer
 if (_tracer isEqualTo 'red') then {
 	_itemWeaponTracerAmmo =
@@ -2771,7 +2771,7 @@ if (_tracer isEqualTo 'red') then {
 		"JCA_25Rnd_45ACP_UMP_Tracer_Red_Sand_Mag"
 	];
 
-    _itemWeaponSFRifle =
+    _itemWeaponSFRifleAmmo =
     [
         //============================================================
         //.277 Fury Ammo
@@ -2831,7 +2831,7 @@ if (_tracer isEqualTo 'red') then {
 		//============================================================
 	];
 
-    _itemWeaponSFMG =
+    _itemWeaponSFMGAmmo =
     [
         "KAR_100Rnd_Fury_RT"
     ];
@@ -2982,7 +2982,7 @@ if (_tracer isEqualTo 'red') then {
 		"JCA_25Rnd_45ACP_UMP_Tracer_Yellow_Sand_Mag"
 	];
 
-    _itemWeaponSFRifle =
+    _itemWeaponSFRifleAmmo =
     [
         //============================================================
         //.277 Fury Ammo
@@ -3052,7 +3052,7 @@ if (_tracer isEqualTo 'red') then {
 		"ace_10rnd_762x54_tracer_mag"
     ];
 
-    _itemWeaponSFMG =
+    _itemWeaponSFMGAmmo =
     [
         //============================================================
         //.277 Ammo
@@ -4222,6 +4222,7 @@ private _itemWeaponSFMG =
     "100Rnd_65x39_caseless_mag",
     "ace_100rnd_65x39_caseless_mag_tracer_dim" //IR DIM
 ];
+_itemWeaponSFMG append _itemWeaponSFMGAmmo;
 
 private _itemWeaponSFRifle =
 [
@@ -4332,6 +4333,7 @@ private _itemWeaponSFRifle =
     "30Rnd_65x39_caseless_black_mag",
     "ace_30rnd_65x39_caseless_mag_tracer_dim" //IR DIM version!
 ];
+_itemWeaponSFRifle append _itemWeaponSFRifleAmmo;
 
 
 
