@@ -1930,6 +1930,13 @@ private _itemWeaponRifle =
 	"CUP_arifle_HK416_Wood",
     "rhs_weap_hk416d145",
 
+	"CUP_arifle_L85A2",
+	"CUP_arifle_L85A2_NG",
+	"CUP_arifle_L85A2_G",
+
+	"mjb_cup_eiw97",
+	"mjb_cup_eiw97_ng",
+
     "CUP_arifle_Mk17_STD_FG",
     "CUP_arifle_Mk17_STD_FG_black",
     "CUP_arifle_Mk17_STD_FG_woodland",
@@ -2081,6 +2088,12 @@ private _itemWeaponRifle =
     "CUP_arifle_Sa58RIS2",
     "CUP_arifle_Sa58RIS2_camo",
     "CUP_arifle_Sa58RIS2_woodland",
+	"CUP_arifle_Sa58V",
+	"CUP_arifle_Sa58V_wood",
+	"CUP_arifle_Sa58V_rearris",
+	"CUP_arifle_Sa58V_frontris",
+	"CUP_arifle_Sa58RIS1_woodland",
+	"CUP_arifle_Sa58RIS1_des",
 
     "rhs_weap_akmn",
     "rhs_weap_ak103",
@@ -2166,7 +2179,32 @@ private _itemWeaponRifle =
 	//============================================================
 	// MCC 5.56, 5.45, 7.62x39
 	//============================================================
-	
+    "MCC_SUREFIRE_ICAR_556_BLK_CTR",
+    "MCC_SUREFIRE_ICAR_556_BLK_STR",
+    "MCC_SUREFIRE_ICAR_556_BLK_Bravo",
+    "MCC_SUREFIRE_ICAR_556_GRN_CTR",
+    "MCC_SUREFIRE_ICAR_556_GRN_STR",
+    "MCC_SUREFIRE_ICAR_556_GRN_Bravo",
+    "MCC_HK433_11_STD_BLK_556",
+    "MCC_HK433_11_HK_BLK_556",
+    "MCC_HK433_11_CTR_BLK_556",
+    "MCC_HK433_145_STD_BLK_556",
+    "MCC_HK433_145_HK_BLK_556",
+    "MCC_HK433_145_CTR_BLK_556",
+    "MCC_HK433_16_STD_BLK_556",
+    "MCC_HK433_16_HK_BLK_556",
+    "MCC_HK433_16_CTR_BLK_556",
+    "MCC_HK433_11_STD_FDE_556",
+    "MCC_HK433_145_STD_FDE_556",
+    "MCC_HK433_16_STD_FDE_556",
+    "MCC_HK433_11_HK_FDE_556",
+    "MCC_HK433_145_HK_FDE_556",
+    "MCC_HK433_16_HK_FDE_556",
+    "MCC_HK433_11_CTR_FDE_556",
+    "MCC_HK433_145_CTR_FDE_556",
+    "MCC_HK433_16_CTR_FDE_556",
+    "MCC_LMT_MARSL_NZDF",
+
     "MCC_LMT_MARSL_R20S_RAHE",
     "MCC_M4A1_556_BII_145_CTR",
     "MCC_M4A1_556_BII_145_Bravo",
@@ -2778,6 +2816,8 @@ if (_tracer isEqualTo 'red') then {
         //============================================================
         "KAR_20Rnd_Fury_RT",
         "KAR_20Rnd_Fury_RT_blk",
+		"mjb_KAR_20Rnd_Fury_IR",
+		"mjb_KAR_20Rnd_Fury_IR_blk",
         
         //============================================================
         //6.8 Ammo
@@ -2833,7 +2873,10 @@ if (_tracer isEqualTo 'red') then {
 
     _itemWeaponSFMGAmmo =
     [
-        "KAR_100Rnd_Fury_RT"
+        "KAR_100Rnd_Fury_RT",
+		"mjb_KAR_100Rnd_Fury_RT_TE4",
+		"mjb_KAR_100Rnd_Fury_IR",
+		"mjb_KAR_100Rnd_Fury_IR_TE4"
     ];
 
     _itemWeaponSFSharpshooterAmmo = 
@@ -2844,6 +2887,12 @@ if (_tracer isEqualTo 'red') then {
 
 	_itemWeaponARAmmo =
 	[
+        //============================================================
+		//5.45x39mm
+		//============================================================
+		"mjb_CUP_95Rnd_TE4_LRT4_IR_Tracer_545x39_RPK_M",
+		"mjb_CUP_95Rnd_TE4_LRT4_Red_Tracer_545x39_RPK_M",
+
         //============================================================
 		//5.56x45mm
 		//============================================================
@@ -2881,6 +2930,8 @@ if (_tracer isEqualTo 'red') then {
 		//Loose ammo
         "greenmag_ammo_580x42_basic_60Rnd",
         "greenmag_ammo_580x42_basic_30Rnd",
+        "greenmag_ammo_545x39_basic_60Rnd",
+        "greenmag_ammo_545x39_basic_30Rnd",
 
 		//============================================================
 		//7.62x51mm
@@ -2991,6 +3042,8 @@ if (_tracer isEqualTo 'red') then {
         "KAR_20Rnd_Fury_YT_blk",
         "KAR_20Rnd_Fury_GT",
         "KAR_20Rnd_Fury_YT",
+		"mjb_KAR_20Rnd_Fury_IR",
+		"mjb_KAR_20Rnd_Fury_IR_blk",
 
         //============================================================
         //6.8 Ammo
@@ -3058,11 +3111,21 @@ if (_tracer isEqualTo 'red') then {
         //.277 Ammo
         //============================================================		
         "KAR_100Rnd_Fury_GT",
-        "KAR_100Rnd_Fury_YT"
+        "KAR_100Rnd_Fury_YT",
+		"mjb_KAR_100Rnd_Fury_GT_TE4",
+		"mjb_KAR_100Rnd_Fury_YT_TE4",
+		"mjb_KAR_100Rnd_Fury_IR",
+		"mjb_KAR_100Rnd_Fury_IR_TE4"
     ];
 
 	_itemWeaponARAmmo =
 	[
+        //============================================================
+		//5.45x39mm
+		//============================================================
+		"mjb_CUP_95Rnd_TE4_LRT4_IR_Tracer_545x39_RPK_M",
+		"mjb_CUP_95Rnd_TE4_LRT4_Yellow_Tracer_545x39_RPK_M",
+
         //============================================================
 		//5.56x45mm
 		//============================================================
@@ -3370,6 +3433,35 @@ private _itemWeaponSFSharpshooter =
     //============================================================
     //Weapons
     //============================================================
+    //MCC
+    //6 ARC DMR
+    "MCC_SUREFIRE_ICAR_6ARC_BLK_CTR",
+    "MCC_SUREFIRE_ICAR_6ARC_BLK_STR",
+    "MCC_SUREFIRE_ICAR_6ARC_BLK_Bravo",
+    "MCC_SUREFIRE_ICAR_6ARC_GRN_CTR",
+    "MCC_SUREFIRE_ICAR_6ARC_GRN_STR",
+    "MCC_SUREFIRE_ICAR_6ARC_GRN_Bravo",
+
+	"MCC_LMT_MARSL_SPECWAR_6ARC_BLK_CTR",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_BLK_SLK",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_BLK_SOPMOD",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_DE_CTR",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_DE_SLK",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_DE_SOPMOD",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_FDE_CTR",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_FDE_SLK",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_FDE_SOPMOD",
+    //6ARC Ammo
+    "MCC_ICM_6ARC_20RD_ATIP",
+    "MCC_ICAR_6ARC_25RD_ATIP",
+    "MCC_ICAR_FDE_6ARC_25RD_ATIP",
+    
+	//6.5 creedmore ammo
+    "ACE_30Rnd_65_Creedmor_mag",
+    "ACE_30Rnd_65_Creedmor_msbs_mag",
+    "ACE_30Rnd_65_Creedmor_khaki_mag",
+    "ACE_30Rnd_65_Creedmor_black_mag",
+    
     //7.62x51mm
     "srifle_DMR_01_F",
     
@@ -3765,6 +3857,7 @@ private _itemWeaponGL =
 	"rhs_mag_M433_HEDP",
 
 	"mjb_blug",
+	"mjb_M576buck",
 
     //Rusfor
     "CUP_1Rnd_HE_GP25_M",
@@ -4245,7 +4338,30 @@ private _itemWeaponSFRifle =
     "MCC_PMAG_65x43_25_109CMOT",
     "MCC_PMAG_65x43_25_FDE_109CMOT",
 
-    //7.62x39 NATO SCARY ROUND, NOT AK
+    //6ARC
+    "MCC_SUREFIRE_ICAR_6ARC_BLK_CTR",
+    "MCC_SUREFIRE_ICAR_6ARC_BLK_STR",
+    "MCC_SUREFIRE_ICAR_6ARC_BLK_Bravo",
+    "MCC_SUREFIRE_ICAR_6ARC_GRN_CTR",
+    "MCC_SUREFIRE_ICAR_6ARC_GRN_STR",
+    "MCC_SUREFIRE_ICAR_6ARC_GRN_Bravo",
+
+	"MCC_LMT_MARSL_SPECWAR_6ARC_BLK_CTR",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_BLK_SLK",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_BLK_SOPMOD",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_DE_CTR",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_DE_SLK",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_DE_SOPMOD",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_FDE_CTR",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_FDE_SLK",
+    "MCC_LMT_MARSL_SPECWAR_6ARC_FDE_SOPMOD",
+
+    //6ARC
+    "MCC_ICAR_6ARC_25RD_GPR",
+    "MCC_ICAR_FDE_6ARC_25RD_GPR",
+    "MCC_ICM_6ARC_20RD_GPR",
+
+    //7.62x39 NATO
     "MCC_SpearLT_115_762x39_ANO_Bravo",
     "MCC_SpearLT_115_762x39_ANO_MPLFS",
     "MCC_SpearLT_115_762x39_ANO_SLK",
@@ -4334,32 +4450,6 @@ private _itemWeaponSFRifle =
     "ace_30rnd_65x39_caseless_mag_tracer_dim" //IR DIM version!
 ];
 _itemWeaponSFRifle append _itemWeaponSFRifleAmmo;
-
-
-
-private _itemWeaponSFSharpshooter =
-[
-    //6 ARC DMR
-    "MCC_LMT_MARSL_SPECWAR_6ARC_BLK_CTR",
-    "MCC_LMT_MARSL_SPECWAR_6ARC_BLK_SLK",
-    "MCC_LMT_MARSL_SPECWAR_6ARC_BLK_SOPMOD",
-    "MCC_LMT_MARSL_SPECWAR_6ARC_DE_CTR",
-    "MCC_LMT_MARSL_SPECWAR_6ARC_DE_SLK",
-    "MCC_LMT_MARSL_SPECWAR_6ARC_DE_SOPMOD",
-    "MCC_LMT_MARSL_SPECWAR_6ARC_FDE_CTR",
-    "MCC_LMT_MARSL_SPECWAR_6ARC_FDE_SLK",
-    "MCC_LMT_MARSL_SPECWAR_6ARC_FDE_SOPMOD",
-    //6ARC Ammo
-    "MCC_ICM_6ARC_20RD_ATIP",
-    "MCC_ICM_6ARC_20RD_ADVAP",
-    "MCC_ICM_6ARC_20RD_GPR",
-    //6.5 creedmore ammo
-    "ACE_30Rnd_65_Creedmor_mag",
-    "ACE_30Rnd_65_Creedmor_msbs_mag",
-    "ACE_30Rnd_65_Creedmor_khaki_mag",
-    "ACE_30Rnd_65_Creedmor_black_mag"
-
-];
 
 private _itemSFScoutGhillies =
 [
@@ -5078,11 +5168,11 @@ switch (true) do
     }; // + _itemWeaponRLAT
         case (_unitRole in ["sniper","B_Sharpshooter_F"]) :
     {
-        [arsenal, (_itemEquipment + _itemFacewear + _itemMod + _itemReflexSight + _itemSpecial + _itemWeaponSFSharpshooter + _itemWeaponPistol + _itemWeaponCQB + _itemWeaponAmmo + _itemWeaponTracerAmmo +  _itemWeaponSniper + _itemSniper + _itemSniperAmmo + _itemLeaderEquipment + _tarkovuniforms + _itemSFScoutGhillies)] call ace_arsenal_fnc_initBox;
+        [arsenal, (_itemEquipment + _itemFacewear + _itemMod + _itemReflexSight + _itemSpecial + _itemWeaponSFRifle + _itemWeaponSFSharpshooter + _itemWeaponPistol + _itemWeaponCQB + _itemWeaponAmmo + _itemWeaponTracerAmmo +  _itemWeaponSniper + _itemSniper + _itemSniperAmmo + _itemLeaderEquipment + _tarkovuniforms + _itemSFScoutGhillies)] call ace_arsenal_fnc_initBox;
     };
         case (_unitRole in ["spotter","B_Spotter_F"]) :
     {
-        [arsenal, (_itemEquipment + _itemFacewear + _itemMod + _itemReflexSight + _itemSpecial + _itemWeaponSFSharpshooter + _itemWeaponRifle + _itemWeaponPistol + _itemWeaponAmmo + _itemWeaponTracerAmmo + _itemSniper + _itemLeaderEquipment + _itemSniperAmmo + _tarkovuniforms + _itemSFScoutGhillies)] call ace_arsenal_fnc_initBox;
+        [arsenal, (_itemEquipment + _itemFacewear + _itemMod + _itemReflexSight + _itemSpecial + _itemWeaponSFRifle + _itemWeaponSFSharpshooter + _itemWeaponRifle + _itemWeaponPistol + _itemWeaponAmmo + _itemWeaponTracerAmmo + _itemSniper + _itemLeaderEquipment + _itemSniperAmmo + _tarkovuniforms + _itemSFScoutGhillies)] call ace_arsenal_fnc_initBox;
     };
         case (_unitRole in ["sfsl","B_recon_TL_F"]) :
     {
@@ -5117,7 +5207,7 @@ switch (true) do
     };
         case (_unitRole in ["sfdmr","B_recon_M_F"]) :
     {
-        [arsenal, (_itemEquipment + _itemFacewear + _itemWeaponLAT + _itemWeaponCQB + _itemSpecial + _itemWeaponARAmmo + _itemWeaponHighCapAmmo + _itemWeaponSFSharpshooter + _itemSniper + _itemAmmoMAT + _itemMod + _itemReflexSight + _itemWeaponRifle + _itemWeaponPistol + _itemWeaponAmmo + _itemWeaponTracerAmmo + _itemSF + _tarkovuniforms + _itemSFScoutGhillies + _itemWeaponSFRifle + _itemWeaponSFSharpshooter)] call ace_arsenal_fnc_initBox; //+ _itemWeaponSniper
+        [arsenal, (_itemEquipment + _itemFacewear + _itemWeaponLAT + _itemWeaponCQB + _itemSpecial + _itemWeaponARAmmo + _itemWeaponHighCapAmmo + _itemWeaponSFSharpshooter + _itemSniper + _itemAmmoMAT + _itemMod + _itemReflexSight + _itemWeaponRifle + _itemWeaponPistol + _itemWeaponAmmo + _itemWeaponTracerAmmo + _itemSF + _tarkovuniforms + _itemSFScoutGhillies + _itemWeaponSFRifle)] call ace_arsenal_fnc_initBox; //+ _itemWeaponSniper
 
         player setUnitTrait ["Medic", true];
     };
