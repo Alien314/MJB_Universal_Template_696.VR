@@ -659,7 +659,7 @@ class Mission
 	class Intel
 	{
 		briefingName="MJB Universal Template 696";
-		overviewText="Slot up Platoon > ASL > A1 > A2 > BSL > B1 > B2...";
+		overviewText="Short desc of special slots/Friendly/enemy comp...";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0;
