@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=62128;
+		nextID=62139;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=486;
+		nextID=488;
 	};
 	class Camera
 	{
-		pos[]={361.10419,147.06763,375.68469};
-		dir[]={-0.87365073,-0.48224965,0.065653577};
-		up[]={-0.4809359,0.87600225,0.036141984};
-		aside[]={0.074940145,-5.6624413e-07,0.9972629};
+		pos[]={175.66512,34.503265,235.6553};
+		dir[]={-0.79768753,-0.59151381,-0.11788302};
+		up[]={-0.58518887,0.80626893,-0.086480387};
+		aside[]={-0.14620586,-9.7241718e-07,0.98930383};
 	};
 };
 binarizationWanted=0;
@@ -382,19 +382,6 @@ class CustomAttributes
 		name="TMF_ORBAT_Settings";
 		class Attribute0
 		{
-			property="TMF_ORBATTracker";
-			expression="false";
-			class Value
-			{
-				class data
-				{
-					singleType="BOOL";
-					value=0;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="TMF_ORBATTrackerCondition";
 			expression="false";
 			class Value
@@ -403,6 +390,19 @@ class CustomAttributes
 				{
 					singleType="STRING";
 					value="true";
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="TMF_ORBATTracker";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="BOOL";
+					value=0;
 				};
 			};
 		};
@@ -659,7 +659,7 @@ class Mission
 	class Intel
 	{
 		briefingName="MJB Universal Template 696";
-		overviewText="Short desc of special slots/Friendly/enemy comp...";
+		overviewText="Short desc of special slots/Friendly/enemy comp";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0;
@@ -2342,190 +2342,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={196.87366,5.0014391,396.59229};
-						angles[]={0,1.5967145,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						rank="CAPTAIN";
-						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
-						name="JTAC";
-						description="JTAC";
-						isPlayable=1;
-						class Inventory
-						{
-						};
-					};
-					id=61233;
-					type="B_Soldier_SL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="TMF_assignGear_faction";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="player_loadout";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="TMF_assignGear_enabled";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="TMF_Briefinglist";
-							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[14,15]";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.95999998;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sl"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="TMF_assignGear_role";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="sl";
-								};
-							};
-						};
-						nAttributes=12;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={194.31808,5.0014391,393.18933};
 						angles[]={0,1.5967145,0};
 					};
@@ -2664,7 +2480,7 @@ class Mission
 						nAttributes=9;
 					};
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2807,7 +2623,7 @@ class Mission
 						nAttributes=9;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -2973,6 +2789,281 @@ class Mission
 							};
 						};
 						nAttributes=11;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={197.25,5.0014391,396.17499};
+						angles[]={0,1.5967145,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CAPTAIN";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
+						name="JTAC";
+						description="JTAC";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=62128;
+					type="B_T_Recon_JTAC_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TMF_assignGear_faction";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="player_loadout";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="TMF_assignGear_role";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="sl";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="TMF_Briefinglist";
+							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[]";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.60000002;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[14,15]";
+								};
+							};
+						};
+						nAttributes=19;
 					};
 				};
 			};
@@ -10538,190 +10629,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={153.86865,5.0014391,404.8363};
-						angles[]={0,1.5967145,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						rank="CAPTAIN";
-						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
-						name="JTAC2";
-						description="JTAC";
-						isPlayable=1;
-						class Inventory
-						{
-						};
-					};
-					id=61291;
-					type="B_Soldier_SL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="TMF_assignGear_faction";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="player_loadout";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="TMF_assignGear_enabled";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="TMF_Briefinglist";
-							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[14,15]";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.95999998;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sl"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="TMF_assignGear_role";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="sl";
-								};
-							};
-						};
-						nAttributes=12;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={151.31345,5.0014391,401.43317};
 						angles[]={0,1.5967145,0};
 					};
@@ -10860,7 +10767,7 @@ class Mission
 						nAttributes=9;
 					};
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -11003,7 +10910,7 @@ class Mission
 						nAttributes=9;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -11169,6 +11076,281 @@ class Mission
 							};
 						};
 						nAttributes=11;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={153.869,5.0014391,404.836};
+						angles[]={0,1.5967145,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						rank="CAPTAIN";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
+						name="JTAC2";
+						description="JTAC";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=62134;
+					type="B_T_Recon_JTAC_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TMF_assignGear_faction";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="player_loadout";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="TMF_assignGear_role";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="sl";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="TMF_Briefinglist";
+							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[]";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.60000002;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[14,15]";
+								};
+							};
+						};
+						nAttributes=19;
 					};
 				};
 			};
@@ -22121,7 +22303,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={131.32565,5.0014391,374.88727};
+						position[]={131.326,5.0014391,374.88699};
 						angles[]={0,1.5464665,0};
 					};
 					side="West";
@@ -22130,7 +22312,7 @@ class Mission
 					{
 						ammo=0.51683062;
 						rank="CAPTAIN";
-						name="Torch_1";
+						name="Torch";
 						description="Pathfinder Team Leader@Torch";
 						isPlayable=1;
 						class Inventory
@@ -22143,19 +22325,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="TMF_assignGear_faction";
 							expression="false";
 							class Value
@@ -22167,10 +22336,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
-							property="TMF_assignGear_enabled";
-							expression="false";
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
@@ -22180,20 +22349,20 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute2
 						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							property="TMF_assignGear_role";
+							expression="false";
 							class Value
 							{
 								class data
 								{
 									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+									value="sfsl";
 								};
 							};
 						};
-						class Attribute4
+						class Attribute3
 						{
 							property="face";
 							expression="_this setface _value;";
@@ -22206,7 +22375,163 @@ class Mission
 								};
 							};
 						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
 						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male10ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sfsl"",""rats"",true]";
+								};
+							};
+						};
+						class Attribute16
 						{
 							property="TMF_Channellist";
 							expression="_this setVariable ['TMF_Channellist',_value,true];";
@@ -22219,59 +22544,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute6
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male10ENG";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sfsl"",""rats"",true]";
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="TMF_assignGear_role";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="sfsl";
-								};
-							};
-						};
-						nAttributes=10;
+						nAttributes=17;
 					};
 				};
 				class Item1
@@ -22279,7 +22552,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={129.00165,5.0014391,373.36725};
+						position[]={129.002,5.0014391,373.36697};
 						angles[]={0,1.5464665,0};
 					};
 					side="West";
@@ -22287,7 +22560,6 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						name="Torch_9";
 						description="Pathfinder Medic";
 						isPlayable=1;
 						class Inventory
@@ -22300,19 +22572,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="TMF_assignGear_faction";
 							expression="false";
 							class Value
@@ -22324,10 +22583,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
-							property="TMF_assignGear_enabled";
-							expression="false";
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
@@ -22337,72 +22596,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male10ENG";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sfmed"",""rats"",true]";
-								};
-							};
-						};
-						class Attribute8
+						class Attribute2
 						{
 							property="TMF_assignGear_role";
 							expression="false";
@@ -22415,7 +22609,176 @@ class Mission
 								};
 							};
 						};
-						nAttributes=9;
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male10ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sfmed"",""rats"",true]";
+								};
+							};
+						};
+						nAttributes=16;
 					};
 				};
 				class Item2
@@ -22423,7 +22786,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={127.90463,5.0014391,374.83228};
+						position[]={127.905,5.0014391,374.832};
 						angles[]={0,1.5464665,0};
 					};
 					side="West";
@@ -22431,7 +22794,8 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						name="Torch_7";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
+						name="Torch_JTAC";
 						description="Pathfinder JTAC";
 						isPlayable=1;
 						class Inventory
@@ -22444,19 +22808,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="TMF_assignGear_faction";
 							expression="false";
 							class Value
@@ -22468,10 +22819,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
-							property="TMF_assignGear_enabled";
-							expression="false";
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
@@ -22481,85 +22832,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[15,14]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.01;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male10ENG";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sfsl"",""rats"",true]";
-								};
-							};
-						};
-						class Attribute9
+						class Attribute2
 						{
 							property="TMF_assignGear_role";
 							expression="false";
@@ -22572,86 +22845,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=10;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={129.13065,5.0014391,376.63727};
-						angles[]={0,1.5464665,0};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						rank="SERGEANT";
-						name="Torch_8";
-						description="Pathfinder Machinegunner";
-						isPlayable=1;
-						class Inventory
-						{
-						};
-					};
-					id=61377;
-					type="B_recon_TL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="TMF_assignGear_faction";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="rats";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="TMF_assignGear_enabled";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
 						class Attribute3
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute4
 						{
 							property="face";
 							expression="_this setface _value;";
@@ -22664,20 +22858,20 @@ class Mission
 								};
 							};
 						};
-						class Attribute5
+						class Attribute4
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
 								{
-									singleType="SCALAR";
-									value=1.01;
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};
-						class Attribute6
+						class Attribute5
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -22690,7 +22884,124 @@ class Mission
 								};
 							};
 						};
+						class Attribute6
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
 						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
 						{
 							property="TMF_assignGear_full";
 							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
@@ -22699,11 +23010,76 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="[""sfar"",""rats"",true]";
+									value="[""sfsl"",""rats"",true]";
 								};
 							};
 						};
-						class Attribute8
+						class Attribute16
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[15,14]";
+								};
+							};
+						};
+						nAttributes=17;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={129.131,5.0014391,376.63699};
+						angles[]={0,1.5464665,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						rank="SERGEANT";
+						description="Pathfinder Machinegunner";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=61377;
+					type="B_recon_TL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TMF_assignGear_faction";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="rats";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
 						{
 							property="TMF_assignGear_role";
 							expression="false";
@@ -22716,7 +23092,176 @@ class Mission
 								};
 							};
 						};
-						nAttributes=9;
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male10ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sfar"",""rats"",true]";
+								};
+							};
+						};
+						nAttributes=16;
 					};
 				};
 			};
@@ -22748,7 +23293,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="["""",""Charlie 3-3"","""",26]";
+							value="["""",""Charlie 3-3"","""",0]";
 						};
 					};
 				};
@@ -23158,7 +23703,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={133.27765,5.0014391,387.51428};
+						position[]={133.278,5.0014391,387.51398};
 						angles[]={0,1.5633438,0};
 					};
 					side="West";
@@ -23166,7 +23711,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
 						name="JTACSF";
 						description="JTAC";
 						isPlayable=1;
@@ -23180,19 +23725,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="TMF_assignGear_faction";
 							expression="false";
 							class Value
@@ -23204,10 +23736,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
-							property="TMF_assignGear_enabled";
-							expression="false";
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
@@ -23217,85 +23749,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[15,14]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.02;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male06ENG";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sfsl"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute9
+						class Attribute2
 						{
 							property="TMF_assignGear_role";
 							expression="false";
@@ -23308,7 +23762,189 @@ class Mission
 								};
 							};
 						};
-						nAttributes=10;
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.02;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sfsl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[15,14]";
+								};
+							};
+						};
+						nAttributes=17;
 					};
 				};
 			};
@@ -45401,190 +46037,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={203.85065,5.0014391,553.42328};
-						angles[]={0,1.575212,0};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						rank="CAPTAIN";
-						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
-						name="JTAC_2";
-						description="JTAC";
-						isPlayable=1;
-						class Inventory
-						{
-						};
-					};
-					id=61524;
-					type="B_Soldier_SL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="TMF_assignGear_faction";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="player_loadout";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="TMF_assignGear_enabled";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="TMF_Briefinglist";
-							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[14,15]";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.95999998;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sl"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="TMF_assignGear_role";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="sl";
-								};
-							};
-						};
-						nAttributes=12;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={201.17404,5.0014391,549.80261};
 						angles[]={0,1.575212,0};
 					};
@@ -45736,7 +46188,7 @@ class Mission
 						nAttributes=10;
 					};
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -45892,7 +46344,7 @@ class Mission
 						nAttributes=10;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -46058,6 +46510,281 @@ class Mission
 							};
 						};
 						nAttributes=11;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={203.875,5.0014391,553.17499};
+						angles[]={0,1.5967145,0};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						rank="CAPTAIN";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
+						name="JTAC_2";
+						description="JTAC";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=62131;
+					type="B_T_Recon_JTAC_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TMF_assignGear_faction";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="player_loadout";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="TMF_assignGear_role";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="sl";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="TMF_Briefinglist";
+							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[]";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.60000002;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[14,15]";
+								};
+							};
+						};
+						nAttributes=19;
 					};
 				};
 			};
@@ -53637,190 +54364,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={165.51765,5.0014391,557.48828};
-						angles[]={0,1.575212,0};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						rank="CAPTAIN";
-						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
-						name="JTAC2_2";
-						description="JTAC";
-						isPlayable=1;
-						class Inventory
-						{
-						};
-					};
-					id=61582;
-					type="B_Soldier_SL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="TMF_assignGear_faction";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="player_loadout";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="TMF_assignGear_enabled";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="TMF_Briefinglist";
-							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[14,15]";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.95999998;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sl"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="TMF_assignGear_role";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="sl";
-								};
-							};
-						};
-						nAttributes=12;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={162.84142,5.0014391,553.8681};
 						angles[]={0,1.575212,0};
 					};
@@ -53972,7 +54515,7 @@ class Mission
 						nAttributes=10;
 					};
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -54128,7 +54671,7 @@ class Mission
 						nAttributes=10;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -54294,6 +54837,281 @@ class Mission
 							};
 						};
 						nAttributes=11;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={165.75,5.0014391,557.54999};
+						angles[]={0,1.5967145,0};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						rank="CAPTAIN";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
+						name="JTAC2_2";
+						description="JTAC";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=62136;
+					type="B_T_Recon_JTAC_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TMF_assignGear_faction";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="player_loadout";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="TMF_assignGear_role";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="sl";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="TMF_Briefinglist";
+							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[]";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.60000002;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[14,15]";
+								};
+							};
+						};
+						nAttributes=19;
 					};
 				};
 			};
@@ -65594,7 +66412,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={139.48665,5.0014391,527.92426};
+						position[]={139.487,5.0014391,527.92401};
 						angles[]={0,1.575212,0};
 					};
 					side="East";
@@ -65602,7 +66420,8 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						name="SF1L_4";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
+						name="Torch_JTAC_2";
 						description="Pathfinder JTAC";
 						isPlayable=1;
 						class Inventory
@@ -65615,32 +66434,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute2
-						{
 							property="TMF_assignGear_faction";
 							expression="false";
 							class Value
@@ -65652,10 +66445,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute1
 						{
-							property="TMF_assignGear_enabled";
-							expression="false";
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
@@ -65665,33 +66458,20 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute2
 						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							property="TMF_assignGear_role";
+							expression="false";
 							class Value
 							{
 								class data
 								{
 									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+									value="sfsl";
 								};
 							};
 						};
-						class Attribute5
-						{
-							property="ace_isEngineer";
-							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute6
+						class Attribute3
 						{
 							property="face";
 							expression="_this setface _value;";
@@ -65704,33 +66484,20 @@ class Mission
 								};
 							};
 						};
-						class Attribute7
+						class Attribute4
 						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
 								{
-									singleType="STRING";
-									value="[15,14]";
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};
-						class Attribute8
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.03;
-								};
-							};
-						};
-						class Attribute9
+						class Attribute5
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -65743,16 +66510,68 @@ class Mission
 								};
 							};
 						};
-						class Attribute10
+						class Attribute6
 						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
 							class Value
 							{
 								class data
 								{
 									singleType="STRING";
-									value="[""sfsl"",""player_loadout"",true]";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};
@@ -65771,18 +66590,109 @@ class Mission
 						};
 						class Attribute12
 						{
-							property="TMF_assignGear_role";
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.03;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="TMF_assignGear_enabled";
 							expression="false";
 							class Value
 							{
 								class data
 								{
-									singleType="STRING";
-									value="sfsl";
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};
-						nAttributes=13;
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.60000002;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sfsl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[15,14]";
+								};
+							};
+						};
+						class Attribute19
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=20;
 					};
 				};
 				class Item3
@@ -66445,7 +67355,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={144.73265,5.0014391,541.15631};
+						position[]={144.733,5.0014391,541.15601};
 						angles[]={0,1.5418762,0};
 					};
 					side="East";
@@ -66453,7 +67363,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
 						name="JTACSF_2";
 						description="JTAC";
 						isPlayable=1;
@@ -66467,19 +67377,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="TMF_assignGear_faction";
 							expression="false";
 							class Value
@@ -66491,10 +67388,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
-							property="TMF_assignGear_enabled";
-							expression="false";
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
@@ -66504,85 +67401,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[14,15]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.02;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male06ENG";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sfsl"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute9
+						class Attribute2
 						{
 							property="TMF_assignGear_role";
 							expression="false";
@@ -66595,7 +67414,189 @@ class Mission
 								};
 							};
 						};
-						nAttributes=10;
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.02;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sfsl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[14,15]";
+								};
+							};
+						};
+						nAttributes=17;
 					};
 				};
 			};
@@ -88940,190 +89941,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={207.20065,5.0014391,242.38728};
-						angles[]={0,1.5667471,0};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						rank="CAPTAIN";
-						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
-						name="JTAC_1";
-						description="JTAC";
-						isPlayable=1;
-						class Inventory
-						{
-						};
-					};
-					id=61815;
-					type="B_Soldier_SL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="TMF_assignGear_faction";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="player_loadout";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="TMF_assignGear_enabled";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="TMF_Briefinglist";
-							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[14,15]";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.95999998;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sl"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="TMF_assignGear_role";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="sl";
-								};
-							};
-						};
-						nAttributes=12;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={204.72995,5.0014391,238.724};
 						angles[]={0,1.5667471,0};
 					};
@@ -89275,7 +90092,7 @@ class Mission
 						nAttributes=10;
 					};
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -89431,7 +90248,7 @@ class Mission
 						nAttributes=10;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -89597,6 +90414,281 @@ class Mission
 							};
 						};
 						nAttributes=11;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={207.75,5.0014391,242.925};
+						angles[]={0,1.5967145,0};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						rank="CAPTAIN";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
+						name="JTAC_1";
+						description="JTAC";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=62133;
+					type="B_T_Recon_JTAC_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TMF_assignGear_faction";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="player_loadout";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="TMF_assignGear_role";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="sl";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="TMF_Briefinglist";
+							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[]";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.60000002;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[14,15]";
+								};
+							};
+						};
+						nAttributes=19;
 					};
 				};
 			};
@@ -97163,190 +98255,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={169.72266,5.0014391,243.72128};
-						angles[]={0,1.5667471,0};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						rank="CAPTAIN";
-						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
-						name="JTAC2_1";
-						description="JTAC";
-						isPlayable=1;
-						class Inventory
-						{
-						};
-					};
-					id=61873;
-					type="B_Soldier_SL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="TMF_assignGear_faction";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="player_loadout";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="TMF_assignGear_enabled";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="TMF_Briefinglist";
-							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[14,15]";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.95999998;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male12ENG";
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sl"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="TMF_assignGear_role";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="sl";
-								};
-							};
-						};
-						nAttributes=12;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={167.25237,5.0014391,240.05757};
 						angles[]={0,1.5667471,0};
 					};
@@ -97498,7 +98406,7 @@ class Mission
 						nAttributes=10;
 					};
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -97654,7 +98562,7 @@ class Mission
 						nAttributes=10;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -97807,6 +98715,281 @@ class Mission
 							};
 						};
 						nAttributes=10;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={170.185,5.0014391,244.02501};
+						angles[]={0,1.5967145,0};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						rank="CAPTAIN";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
+						name="JTAC2_1";
+						description="JTAC";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=62138;
+					type="B_T_Recon_JTAC_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TMF_assignGear_faction";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="player_loadout";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="TMF_assignGear_role";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="sl";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="TMF_Briefinglist";
+							expression="_this setVariable ['TMF_Briefinglist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[]";
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.60000002;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[14,15]";
+								};
+							};
+						};
+						nAttributes=19;
 					};
 				};
 			};
@@ -108583,7 +109766,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={152.95065,5.0014391,215.2623};
+						position[]={152.951,5.0014391,215.26201};
 						angles[]={0,1.5667471,0};
 					};
 					side="Independent";
@@ -108591,7 +109774,7 @@ class Mission
 					class Attributes
 					{
 						rank="MAJOR";
-						name="Torch_3";
+						name="Torch_1";
 						description="Pathfinder Team Leader@Torch";
 						isPlayable=1;
 						class Inventory
@@ -108604,32 +109787,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute2
-						{
 							property="TMF_assignGear_faction";
 							expression="false";
 							class Value
@@ -108641,10 +109798,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute1
 						{
-							property="TMF_assignGear_enabled";
-							expression="false";
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
@@ -108654,33 +109811,20 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute2
 						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							property="TMF_assignGear_role";
+							expression="false";
 							class Value
 							{
 								class data
 								{
 									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+									value="sfsl";
 								};
 							};
 						};
-						class Attribute5
-						{
-							property="ace_isEngineer";
-							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute6
+						class Attribute3
 						{
 							property="face";
 							expression="_this setface _value;";
@@ -108693,7 +109837,189 @@ class Mission
 								};
 							};
 						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male02ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
 						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="threshold";
+							expression="if (_value >= 0.1) then {_this setVariable [""diw_armor_plates_main_maxHp"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.03;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.60000002;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sfsl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute18
 						{
 							property="TMF_Channellist";
 							expression="_this setVariable ['TMF_Channellist',_value,true];";
@@ -108706,72 +110032,20 @@ class Mission
 								};
 							};
 						};
-						class Attribute8
+						class Attribute19
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
 								{
 									singleType="SCALAR";
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						class Attribute9
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male02ENG";
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sfsl"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="threshold";
-							expression="if (_value >= 0.1) then {_this setVariable [""diw_armor_plates_main_maxHp"", _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute12
-						{
-							property="TMF_assignGear_role";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="sfsl";
-								};
-							};
-						};
-						nAttributes=13;
+						nAttributes=20;
 					};
 				};
 				class Item1
@@ -108779,7 +110053,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={149.87965,5.0014391,213.34729};
+						position[]={149.88,5.0014391,213.347};
 						angles[]={0,1.5667471,0};
 					};
 					side="Independent";
@@ -108787,7 +110061,6 @@ class Mission
 					class Attributes
 					{
 						rank="MAJOR";
-						name="Torch_4";
 						description="Pathfinder Medic";
 						isPlayable=1;
 						class Inventory
@@ -108800,32 +110073,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute2
-						{
 							property="TMF_assignGear_faction";
 							expression="false";
 							class Value
@@ -108837,10 +110084,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
+						class Attribute1
 						{
-							property="TMF_assignGear_enabled";
-							expression="false";
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
@@ -108850,111 +110097,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ace_isEngineer";
-							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[]";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.03;
-								};
-							};
-						};
-						class Attribute9
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male02ENG";
-								};
-							};
-						};
-						class Attribute10
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sfmed"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute11
-						{
-							property="threshold";
-							expression="if (_value >= 0.1) then {_this setVariable [""diw_armor_plates_main_maxHp"", _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0;
-								};
-							};
-						};
-						class Attribute12
+						class Attribute2
 						{
 							property="TMF_assignGear_role";
 							expression="false";
@@ -108967,112 +110110,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=13;
-					};
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={148.42566,5.0014391,216.0123};
-						angles[]={0,1.5667471,0};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						rank="MAJOR";
-						name="Torch_6";
-						description="Pathfinder JTAC";
-						isPlayable=1;
-						class Inventory
-						{
-						};
-					};
-					id=61958;
-					type="B_recon_TL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=0.60000002;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="TMF_assignGear_faction";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="player_loadout";
-								};
-							};
-						};
 						class Attribute3
-						{
-							property="TMF_assignGear_enabled";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="ace_isEngineer";
-							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1;
-								};
-							};
-						};
-						class Attribute6
 						{
 							property="face";
 							expression="_this setface _value;";
@@ -109085,33 +110123,20 @@ class Mission
 								};
 							};
 						};
-						class Attribute7
+						class Attribute4
 						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
 								{
-									singleType="STRING";
-									value="[15,14]";
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};
-						class Attribute8
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.03;
-								};
-							};
-						};
-						class Attribute9
+						class Attribute5
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -109124,16 +110149,68 @@ class Mission
 								};
 							};
 						};
-						class Attribute10
+						class Attribute6
 						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
 							class Value
 							{
 								class data
 								{
 									singleType="STRING";
-									value="[""sfsl"",""player_loadout"",true]";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};
@@ -109152,84 +110229,18 @@ class Mission
 						};
 						class Attribute12
 						{
-							property="TMF_assignGear_role";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="sfsl";
-								};
-							};
-						};
-						nAttributes=13;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={150.12366,5.0014391,217.57629};
-						angles[]={0,1.5667471,0};
-					};
-					side="Independent";
-					flags=5;
-					class Attributes
-					{
-						rank="MAJOR";
-						name="Torch_5";
-						description="Pathfinder Machinegunner";
-						isPlayable=1;
-						class Inventory
-						{
-						};
-					};
-					id=61959;
-					type="B_recon_TL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="greenmag_main_MagSkillCoef";
-							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							property="pitch";
+							expression="_this setpitch _value;";
 							class Value
 							{
 								class data
 								{
 									singleType="SCALAR";
-									value=0.60000002;
+									value=1.03;
 								};
 							};
 						};
-						class Attribute2
-						{
-							property="TMF_assignGear_faction";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="player_loadout";
-								};
-							};
-						};
-						class Attribute3
+						class Attribute13
 						{
 							property="TMF_assignGear_enabled";
 							expression="false";
@@ -109242,46 +110253,59 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute14
 						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
 								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};
-						class Attribute5
+						class Attribute15
 						{
-							property="ace_isEngineer";
-							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
 							class Value
 							{
 								class data
 								{
 									singleType="SCALAR";
-									value=1;
+									value=0.60000002;
 								};
 							};
 						};
-						class Attribute6
+						class Attribute17
 						{
-							property="face";
-							expression="_this setface _value;";
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
 								{
 									singleType="STRING";
-									value="";
+									value="[""sfmed"",""player_loadout"",true]";
 								};
 							};
 						};
-						class Attribute7
+						class Attribute18
 						{
 							property="TMF_Channellist";
 							expression="_this setVariable ['TMF_Channellist',_value,true];";
@@ -109294,20 +110318,113 @@ class Mission
 								};
 							};
 						};
-						class Attribute8
+						class Attribute19
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
 								{
 									singleType="SCALAR";
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						class Attribute9
+						nAttributes=20;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={148.42599,5.0014391,216.01201};
+						angles[]={0,1.5667471,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						rank="MAJOR";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
+						name="Torch_JTAC_1";
+						description="Pathfinder JTAC";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=61958;
+					type="B_recon_TL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TMF_assignGear_faction";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="player_loadout";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="TMF_assignGear_role";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="sfsl";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -109320,16 +110437,68 @@ class Mission
 								};
 							};
 						};
-						class Attribute10
+						class Attribute6
 						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
 							class Value
 							{
 								class data
 								{
 									singleType="STRING";
-									value="[""sfar"",""player_loadout"",true]";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
 								};
 							};
 						};
@@ -109348,6 +110517,162 @@ class Mission
 						};
 						class Attribute12
 						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.03;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.60000002;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sfsl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[15,14]";
+								};
+							};
+						};
+						class Attribute19
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=20;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={150.12399,5.0014391,217.576};
+						angles[]={0,1.5667471,0};
+					};
+					side="Independent";
+					flags=5;
+					class Attributes
+					{
+						rank="MAJOR";
+						description="Pathfinder Machinegunner";
+						isPlayable=1;
+						class Inventory
+						{
+						};
+					};
+					id=61959;
+					type="B_recon_TL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TMF_assignGear_faction";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="player_loadout";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
 							property="TMF_assignGear_role";
 							expression="false";
 							class Value
@@ -109359,7 +110684,228 @@ class Mission
 								};
 							};
 						};
-						nAttributes=13;
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male02ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="threshold";
+							expression="if (_value >= 0.1) then {_this setVariable [""diw_armor_plates_main_maxHp"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.03;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="greenmag_main_MagSkillCoef";
+							expression="_this setVariable [""greenmag_main_MagSkillCoef"", parseNumber (_value toFixed 1), true]";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.60000002;
+								};
+							};
+						};
+						class Attribute17
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sfar"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute18
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[]";
+								};
+							};
+						};
+						class Attribute19
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=20;
 					};
 				};
 			};
@@ -109840,7 +111386,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={143.35165,5.0014391,225.72829};
+						position[]={143.35201,5.0014391,225.728};
 						angles[]={0,1.5667471,0};
 					};
 					side="Independent";
@@ -109848,7 +111394,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable mjb_jtacArray;" \n "};";
+						init="if (isServer) then {" \n "  if (isNil ""mjb_jtacArray"") then {mjb_jtacArray = []};" \n "  mjb_jtacArray pushBackUnique this;" \n "  publicVariable ""mjb_jtacArray"";" \n "};";
 						name="JTACSF_1";
 						description="JTAC";
 						isPlayable=1;
@@ -109862,19 +111408,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="TMF_assignGear_faction";
 							expression="false";
 							class Value
@@ -109886,10 +111419,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute2
+						class Attribute1
 						{
-							property="TMF_assignGear_enabled";
-							expression="false";
+							property="zen_transform_widget_edenAllowUav";
+							expression="_this setVariable ['zen_transform_widget_edenAllowUav', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
 							class Value
 							{
 								class data
@@ -109899,85 +111432,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute3
-						{
-							property="acre_sys_radio_edenSetup";
-							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="face";
-							expression="_this setface _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="";
-								};
-							};
-						};
-						class Attribute5
-						{
-							property="TMF_Channellist";
-							expression="_this setVariable ['TMF_Channellist',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[15,14]";
-								};
-							};
-						};
-						class Attribute6
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="SCALAR";
-									value=1.02;
-								};
-							};
-						};
-						class Attribute7
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="Male06ENG";
-								};
-							};
-						};
-						class Attribute8
-						{
-							property="TMF_assignGear_full";
-							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="[""sfsl"",""player_loadout"",true]";
-								};
-							};
-						};
-						class Attribute9
+						class Attribute2
 						{
 							property="TMF_assignGear_role";
 							expression="false";
@@ -109990,7 +111445,189 @@ class Mission
 								};
 							};
 						};
-						nAttributes=10;
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="zen_transform_widget_edenAllowMan";
+							expression="_this setVariable ['zen_transform_widget_edenAllowMan', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male06ENG";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="zen_transform_widget_edenAllowShip";
+							expression="_this setVariable ['zen_transform_widget_edenAllowShip', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="TMF_SpecialistMarker";
+							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="["""",""""]";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="acre_sys_radio_edenSetup";
+							expression="_this setVariable [""acre_sys_radio_setup"", _value, true]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[""ACRE_PRC343"",[1,1]],[""ACRE_PRC152"",1],[""ACRE_PRC117F"",1]]";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="zen_transform_widget_edenAllowAir";
+							expression="_this setVariable ['zen_transform_widget_edenAllowAir', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="zen_transform_widget_edenAllowStatic";
+							expression="_this setVariable ['zen_transform_widget_edenAllowStatic', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.02;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="TMF_assignGear_enabled";
+							expression="false";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute13
+						{
+							property="zen_transform_widget_edenAllowArmor";
+							expression="_this setVariable ['zen_transform_widget_edenAllowArmor', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute14
+						{
+							property="zen_transform_widget_edenAllowCar";
+							expression="_this setVariable ['zen_transform_widget_edenAllowCar', _value]; [_this] call zen_transform_widget_fnc_applyEdenDetectionEngagementAttributes";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute15
+						{
+							property="TMF_assignGear_full";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[""sfsl"",""player_loadout"",true]";
+								};
+							};
+						};
+						class Attribute16
+						{
+							property="TMF_Channellist";
+							expression="_this setVariable ['TMF_Channellist',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[15,14]";
+								};
+							};
+						};
+						nAttributes=17;
 					};
 				};
 			};
